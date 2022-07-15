@@ -1,1 +1,1 @@
-web: gunicorn gunicorn-cfg.py
+web: gunicorn gunicorn-cfg
