@@ -19,7 +19,7 @@ CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY', default='S#perS3crEt_007')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
@@ -31,7 +31,7 @@ ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')
 ALLOWED_HOSTS = [
     'localhost', 'localhost:85', '127.0.0.1',
     env('SERVER', default='127.0.0.1'),
-    'jsm-suporte-rundeck.herokuapp.com']
+    'https://jsm-suporte-rundeck.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:85', 'http://127.0.0.1',
     'https://' + env('SERVER', default='127.0.0.1'),
