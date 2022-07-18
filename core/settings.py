@@ -4,6 +4,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 import os, environ
+import django_heroku
 
 env = environ.Env(
     # set casting, default value
@@ -152,3 +153,6 @@ STATICFILES_DIRS = (
 
 #############################################################
 #############################################################
+
+# Solving DB issues on Heroku by using django_heroku lib
+django_heroku.settings(locals())
