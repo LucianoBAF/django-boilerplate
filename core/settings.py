@@ -155,4 +155,4 @@ STATICFILES_DIRS = (
 #############################################################
 
 # Solving DB issues on Heroku by using django_heroku lib
-django_heroku.settings(locals())
+django_heroku.settings(locals(), staticfiles=False)
